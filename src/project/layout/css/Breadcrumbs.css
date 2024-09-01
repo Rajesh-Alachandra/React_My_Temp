@@ -1,0 +1,50 @@
+/* src/layout/css/Breadcrumbs.css */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 14px;
+    color: #ffffff;
+    background: url('../../../assets/images/particle-lines.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px 15px;
+    border-radius: 5px;
+    /* margin: 10px 0; */
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.breadcrumbs a {
+    font-size: larger;
+    font-weight: 600;
+    text-decoration: none;
+    color: #032a28;
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #278574;
+}
+
+.breadcrumbs span {
+    margin: 0 5px;
+}
+
+/* .breadcrumbs span::before {
+    content: '/';
+    margin-right: 5px;
+    color: #2b0404;
+} */
+
+.breadcrumbs span:first-child::before {
+    content: '';
+}
+
+/* Optional: Adjust alignment for better appearance on different screen sizes */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

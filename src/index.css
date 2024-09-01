@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'Lora';
+  src: url('./assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('./assets/fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('./assets/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  /* Light Mode Colors */
+  --color-background-light: #ffffff;
+  --color-text-light: #000000;
+  --color-link-light: #05463b;
+  --color-button-light: #05463b;
+  --color-button-hover-light: #0056b3;
+
+  /* Dark Mode Colors */
+  --color-background-dark: #212A31;
+  --color-text-dark: #ffffff;
+  --color-link-dark: #87f0e8;
+  --color-button-dark: #87f0e8;
+  --color-button-hover-dark: #62c7ba;
+
+  /* Default Theme Values (can be overridden by data-theme attribute) */
+  --color-background: var(--color-background-light);
+  --color-text: var(--color-text-light);
+  --color-link: var(--color-link-light);
+  --color-button: var(--color-button-light);
+  --color-button-hover: var(--color-button-hover-light);
+}
+
+/* Light Mode Styles */
+[data-theme='light'] {
+  --color-background: var(--color-background-light);
+  --color-text: var(--color-text-light);
+  --color-link: var(--color-link-light);
+  --color-button: var(--color-button-light);
+  --color-button-hover: var(--color-button-hover-light);
+}
+
+/* Dark Mode Styles */
+[data-theme='dark'] {
+  --color-background: var(--color-background-dark);
+  --color-text: var(--color-text-dark);
+  --color-link: var(--color-link-dark);
+  --color-button: var(--color-button-dark);
+  --color-button-hover: var(--color-button-hover-dark);
+}
+
+/* <--------------> Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* <---------------> Body Styling */
+body {
+  font-family: 'IBM Plex Mono', sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* <--------------------> Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+p {
+  margin-bottom: 0.1rem;
+}
+
+/* ---------------------> Links */
+a {
+  color: var(--color-link);
+  text-decoration: none !important;
+}
+
+/* <-------------------> Lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.1rem;
+}
+
+/* <-----------------------> Buttons */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--color-button);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+}
+
+/* ---------------> Forms */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* <-------------------> Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* <-------------------> Default Image Styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Childern_Content {
+  padding-top: 70px;
+}
+
+/* Tablet Styles (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Default Responsive Breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
